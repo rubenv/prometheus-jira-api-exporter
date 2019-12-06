@@ -23,5 +23,5 @@ jobs:
 
     - name: Build and publish Docker image
       run: |
-        docker build . -t docker.pkg.github.com/$GITHUB_REPOSITORY:latest
-        docker push docker.pkg.github.com/$GITHUB_REPOSITORY:latest
+        docker build . -t docker.pkg.github.com/$GITHUB_REPOSITORY/jira-api-exporter:latest
+        docker push docker.pkg.github.com/$GITHUB_REPOSITORY/jira-api-exporterlatest
