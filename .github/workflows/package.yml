@@ -11,12 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: azure/docker-login@v1
+    - name: Log in to Docker registry
+      uses: azure/docker-login@v1
       with:
         login-server: docker.pkg.github.com
         username: $GITHUB_ACTOR
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: |
+    - name: Check out code
+      uses: actions/checkout@v1
+
+    - name: Build and publish Docker image
+      run: |
         docker build . -t docker.pkg.github.com/$GITHUB_REPOSITORY:latest
         docker push docker.pkg.github.com/$GITHUB_REPOSITORY:latest
