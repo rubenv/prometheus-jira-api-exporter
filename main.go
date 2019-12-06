@@ -22,11 +22,7 @@ func Run() error {
 		Pass   string `long:"pass" description:"Jira pass" env:"JIRA_PASS"`
 		Listen string `long:"listen" description:"Listen Address" default:":9090" env:"LISTEN"`
 
-		UpdateInterval time.Duration `long:"update-interval" description:"Update interval" default:"15m"`
-
-		Args struct {
-			Filename string `positional-arg-name:"filename" description:"Telemetry file. Will use live telemetry if ommitted"`
-		} `positional-args:"yes"`
+		UpdateInterval time.Duration `long:"update-interval" description:"Update interval" default:"15m" env:"UPDATE_INTERVAL"`
 	}
 
 	_, err := flags.Parse(&opts)
