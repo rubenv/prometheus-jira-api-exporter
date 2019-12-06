@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - uses: azure/docker-login@v1
-    with:
-      login-server: docker.pkg.github.com
-      username: $GITHUB_ACTOR
-      password: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        login-server: docker.pkg.github.com
+        username: $GITHUB_ACTOR
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     - run: |
         docker build . -t docker.pkg.github.com/${{GITHUB_REPOSITORY}}:latest
