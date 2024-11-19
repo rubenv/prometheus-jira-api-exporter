@@ -7,7 +7,7 @@ require (
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/google/go-querystring v1.0.0 // indirect
 	github.com/jessevdk/go-flags v1.4.0
-	github.com/prometheus/client_golang v1.2.1
+	github.com/prometheus/client_golang v1.11.1
 	github.com/trivago/tgo v1.0.7 // indirect
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a
 )
